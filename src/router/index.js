@@ -18,11 +18,8 @@ const states = [
  }
 ]
 
-const router = new Router({
+export default new Router({
   debugging: true,
   defaultState: 'home',
-  fallbackState: '404',
-  href: 'https://mysite.com/blogs'
+  fallbackState: '404'
 }, states)
-
-riot.mixin(router)
