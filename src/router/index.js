@@ -1,5 +1,15 @@
 import Router from 'riot-view-router'
 
+import './views/home.tag'
+import './views/profile.tag'
+import './views/not-found.tag'
+
+const options = {
+  debugging: true,
+  defaultState: 'home',
+  fallbackState: '404'
+}
+
 const states = [
  {
    name: 'home',
@@ -18,8 +28,4 @@ const states = [
  }
 ]
 
-export default new Router({
-  debugging: true,
-  defaultState: 'home',
-  fallbackState: '404'
-}, states)
+export default new Router(options, states)
