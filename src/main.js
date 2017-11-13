@@ -1,3 +1,8 @@
+import 'skeleton-css/css/normalize.css'
+import 'skeleton-css/css/skeleton.css'
+import 'animate.css/animate.min.css'
+import 'ionicons/dist/css/ionicons.min.css'
+
 import riot from 'riot'
 import router from './router'
 
