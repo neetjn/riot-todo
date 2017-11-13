@@ -8,4 +8,6 @@
   <section id="bottom">
     <footer-partial></footer-partial>
   </section>
+
+  this.$router.start()
 </app>

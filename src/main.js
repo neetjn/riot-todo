@@ -1,9 +1,11 @@
 import riot from 'riot'
-
-import Router from './router'
+import router from './router'
 
 import './components/header.tag'
 import './components/footer.tag'
 import './components/sticky.tag'
-
 import './app.tag'
+
+
+riot.mixin(router)
+riot.mount('app')

@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "riot": "3.7.3",
-    "riot-view-router": "0.0.3"
+    "riot-view-router": "0.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
