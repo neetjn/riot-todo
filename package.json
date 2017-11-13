@@ -15,8 +15,11 @@
   "author": "John Nolette",
   "license": "MIT",
   "dependencies": {
+    "animate.css": "^3.5.2",
+    "ionicons": "^3.0.0",
     "riot": "3.7.3",
-    "riot-view-router": "0.0.4"
+    "riot-view-router": "0.0.4",
+    "skeleton-css": "^2.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
