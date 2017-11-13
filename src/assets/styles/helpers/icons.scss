@@ -1,0 +1,12 @@
+.ico {
+  &.ico-left {
+    padding-right: $ico-dist;
+  }
+  &.ico-right {
+    padding-left: $ico-dist;
+  }
+  &.ico-fixed {
+    padding-right: $ico-dist;
+    padding-left: $ico-dist;
+  }
+}
