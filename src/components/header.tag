@@ -8,7 +8,7 @@
         Eleven
       </div>
       <div class="three columns">
-        <ul class="inline unstyled">
+        <ul id="social" class="inline unstyled">
           <li>
             <i class="ico fi-social-twitter"></i>
           </li>

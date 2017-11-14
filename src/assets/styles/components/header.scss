@@ -7,4 +7,10 @@ header-partial {
   overflow: hidden;
   box-sizing: border-box;
   color: $color-ghost-white;
+
+  & ul#social {
+    li {
+      padding: 0.5rem;
+    }
+  }
 }
