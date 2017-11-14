@@ -8,15 +8,15 @@
         Eleven
       </div>
       <div class="three columns">
-        <ul>
+        <ul class="inline unstyled">
           <li>
             <i class="ico fi-social-twitter"></i>
           </li>
           <li>
-            <i class="ico ico-left icon ion-social-twitter"></i>?
+            <i class="ico fi-social-linkedin"></i>
           </li>
           <li>
-            <i class="ico ico-left icon ion-social-github"></i>?
+            <i class="ico fi-social-github"></i>
           </li>
         </ul>
       </div>
