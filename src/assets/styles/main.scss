@@ -5,3 +5,8 @@
 @import './components/header.scss';
 @import './components/footer.scss';
 @import './components/app.scss';
+
+body {
+  display: flex;
+  flex-direction: column;
+}
