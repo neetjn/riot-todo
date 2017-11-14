@@ -1,3 +1,5 @@
 <footer-partial>
-  <h1>Footer</h1>
+  <div class="container">
+    <h1 class="text-center">Footer</h1>
+  </div>
 </footer-partial>
