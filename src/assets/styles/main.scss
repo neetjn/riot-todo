@@ -6,7 +6,7 @@
 @import './components/footer.scss';
 @import './components/app.scss';
 
-body {
-  display: flex;
-  flex-direction: column;
+r-view {
+  display: block;
+  flex: 1;
 }

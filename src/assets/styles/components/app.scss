@@ -1,10 +1,10 @@
 app {
   display: flex;
-  flex: auto;
   flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 #container {
   flex: 1 1 auto;
-  min-height: 100vh;
 }

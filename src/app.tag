@@ -1,8 +1,6 @@
 <app>
   <header-partial></header-partial>
-  <section id="container">
-    <r-view></r-view>
-  </section>
+  <r-view></r-view>
   <footer-partial></footer-partial>
 
   this.$router.start()
