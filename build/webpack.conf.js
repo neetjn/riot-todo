@@ -52,18 +52,9 @@ module.exports = {
           use: 'css-loader'
         })
       },
-      {
-        test: /\.html$/,
-        loader: 'raw-loader'
-      },
-      {
-        test: /\.(png|jpe|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
-        loader: 'url-loader'
-      },
-      {
-        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader'
-      }
+      { test: /\.html$/, loader: 'raw-loader'},
+      { test: /\.(png|jpe|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/, loader: 'url-loader' },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file-loader' }
     ]
   },
   plugins: [

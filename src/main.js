@@ -1,8 +1,3 @@
-import 'skeleton-css/css/normalize.css'
-import 'skeleton-css/css/skeleton.css'
-import 'animate.css/animate.min.css'
-import 'ionicons/dist/css/ionicons.min.css'
-
 import './assets/styles/main.scss'
 
 import riot from 'riot'

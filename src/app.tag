@@ -1,6 +1,6 @@
 <app>
   <header-partial></header-partial>
-  <r-view></r-view>
+  <section r-view></section>
   <footer-partial></footer-partial>
 
   this.$router.start()

@@ -1,3 +1,8 @@
+@import '~foundation-icons/foundation-icons.css';
+@import '~skeleton-css/css/normalize.css';
+@import '~skeleton-css/css/skeleton.css';
+@import '~animate.css/animate.min.css';
+
 @import './variables.scss';
 @import './helpers/icons.scss';
 @import './helpers/text.scss';
@@ -7,7 +12,7 @@
 @import './components/footer.scss';
 @import './components/app.scss';
 
-r-view {
+section[r-view] {
   display: block;
   flex: 1;
 }
