@@ -34,6 +34,7 @@ npm run app:detached
 * Sass
 * SkeletonCSS
 * animate.css
+* Foundation (icons)
 * Webpack
   * Webpack Extract Text Plugin
   * Webpack Google Font Plugin
