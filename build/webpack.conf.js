@@ -5,6 +5,7 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
+const GoogleFontsPlugin = require('google-fonts-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
@@ -58,6 +59,13 @@ module.exports = {
     ]
   },
   plugins: [
+    new GoogleFontsPlugin({
+			fonts: [
+				{ family: 'Julius Sans One' },
+        { family: 'Zilla Slab Highlight' },
+        { family: 'Barlow Condensed' }
+			]
+		}),
     new ExtractTextPlugin('dist.css'),
     new webpack.ProvidePlugin({
       'riot': 'riot'

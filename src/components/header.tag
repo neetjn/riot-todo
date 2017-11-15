@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="six columns">
-        One
+        <h1 class="logo">To-Do Mock</h1>
       </div>
       <div class="three columns">
         Eleven

@@ -1,4 +1,6 @@
 header-partial {
+  @include shadow(2);
+
   display: block;
   width: 100%;
   padding: 1.5rem;

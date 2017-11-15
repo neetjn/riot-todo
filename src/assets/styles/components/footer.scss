@@ -1,4 +1,15 @@
 footer-partial {
+  @include shadow(1);
+
   background-color: $color-layout-gray;
   padding: 1rem;
+
+  ul li {
+    & a#author {
+      text-decoration: none;
+      color: $color-layout-blue-darkest;
+    }
+    margin: 0.5rem;
+    font-size: smaller;
+  }
 }
