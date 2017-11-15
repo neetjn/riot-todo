@@ -13,6 +13,15 @@ header-partial {
   & ul#social {
     li {
       padding: 0.5rem;
+      font-size: xx-large;
+      a {
+        @include transition(color .5s ease);
+        &:hover {
+          color: $color-light-gray;
+        }
+        text-decoration: none;
+        color: $color-ghost-white;
+      }
     }
   }
 }

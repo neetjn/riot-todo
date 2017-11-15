@@ -10,13 +10,19 @@
       <div class="three columns">
         <ul id="social" class="inline unstyled">
           <li>
-            <i class="ico fi-social-twitter"></i>
+            <a title="twitter" href="https://twitter.com/neet_jn">
+              <i class="ico fi-social-twitter"></i>
+            </a>
           </li>
           <li>
-            <i class="ico fi-social-linkedin"></i>
+            <a title="linkedin" href="https://www.linkedin.com/in/john-nolette-69ba72132/">
+              <i class="ico fi-social-linkedin"></i>
+            </a>
           </li>
           <li>
-            <i class="ico fi-social-github"></i>
+            <a title="github" href="https://github.com/neetjn">
+              <i class="ico fi-social-github"></i>
+            </a>
           </li>
         </ul>
       </div>

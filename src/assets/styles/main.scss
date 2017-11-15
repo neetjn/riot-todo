@@ -8,7 +8,10 @@
 @import './helpers/lists.scss';
 @import './helpers/text.scss';
 @import './helpers/fonts.scss';
+
 @import './mixins/shadow.scss';
+@import './mixins/animations.scss';
+@import './mixins/transition.scss';
 
 @import './components/header.scss';
 @import './components/footer.scss';

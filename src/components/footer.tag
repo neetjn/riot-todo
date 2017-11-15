@@ -2,7 +2,9 @@
   <div class="container">
     <ul class="unstyled text-center">
       <li>
-        <h5><small>Website by <a id="author" href="https://github.com/neetjn">John Nolette</a></small></h5>
+        <h5 class="text-underline">
+          <small>Website by <a id="author" href="https://github.com/neetjn">John Nolette</a></small>
+        </h5>
       </li>
       <li>
         <i class="ico ico-left fi-widget" style="color: #1b1b1b;"></i>Powered by Riot.js
