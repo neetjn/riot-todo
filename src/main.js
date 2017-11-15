@@ -5,6 +5,7 @@ import router from './router'
 
 import './components/header.tag'
 import './components/footer.tag'
+import './components/codesponsor.tag'
 import './app.tag'
 
 

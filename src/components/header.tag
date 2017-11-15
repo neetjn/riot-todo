@@ -5,7 +5,7 @@
         <h1 class="logo">To-Do Mock</h1>
       </div>
       <div class="three columns">
-        Eleven
+        placeholder
       </div>
       <div class="three columns">
         <ul id="social" class="inline unstyled">

@@ -1,5 +1,5 @@
 footer-partial {
-  @include shadow(1);
+  @include shadow(-2);
 
   background-color: $color-layout-gray;
   padding: 1rem;
