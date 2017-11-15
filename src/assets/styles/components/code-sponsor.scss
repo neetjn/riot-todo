@@ -1,4 +1,6 @@
 code-sponsor {
+  @include shadow(1);
+
   display: block;
   margin-top: 4rem;
   margin-bottom: 2rem;

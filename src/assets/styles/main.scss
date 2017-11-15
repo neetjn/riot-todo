@@ -12,13 +12,31 @@
 @import './mixins/shadow.scss';
 @import './mixins/animations.scss';
 @import './mixins/transition.scss';
+@import './mixins/centered.scss';
 
 @import './components/header.scss';
 @import './components/footer.scss';
 @import './components/code-sponsor.scss';
 @import './components/app.scss';
 
-section[r-view] {
+section#view {
   display: block;
   flex: 1;
+}
+
+r-view {
+  @include centered-mat-block(1, 83rem);
+  background-color: $color-ghost-white;
+
+  @media #{$tablet} {
+    padding: 0.5rem;
+  }
+
+  @media #{$tablet} {
+    padding: 1.5rem;
+  }
+
+  @media #{$desktop} {
+    padding: 3rem;
+  }
 }
