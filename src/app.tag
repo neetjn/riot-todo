@@ -1,6 +1,6 @@
 <app>
   <header-partial></header-partial>
-  <codesponsor></codesponsor>
+  <code-sponsor></code-sponsor>
   <section r-view></section>
   <footer-partial></footer-partial>
 
