@@ -7,7 +7,7 @@
 [![build](https://travis-ci.org/neetjn/pcc-mock-site.svg?branch=master)](https://travis-ci.org/neetjn/pcc-mock-site)
 [![Join the chat at https://gitter.im/py-component-controller/Lobby](https://badges.gitter.im/py-component-controller/Lobby.svg)](https://gitter.im/py-component-controller/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Mock site created with riot.js for unit testing [py-component-controller](https://github.com/neetjn/py-component-controller).
+Mock website created with riot.js for unit testing [py-component-controller](https://github.com/neetjn/py-component-controller).
 
 ### Use
 
@@ -28,6 +28,15 @@ You may alternatively run the website in the background,
 ```
 npm run app:detached
 ```
+
+### Technologies
+* Riot.js 3
+* Sass
+* SkeletonCSS
+* animate.css
+* Webpack
+  * Webpack Extract Text Plugin
+  * Webpack Google Font Plugin
 
 ### Contributors
 
