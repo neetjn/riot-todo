@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="six columns">
-        <h1 class="logo">To-Do Mock</h1>
+        <h1 class="logo animated slideInDown">To-Do Mock</h1>
       </div>
       <div class="three columns">
         placeholder
