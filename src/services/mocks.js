@@ -2,9 +2,16 @@ export default {
 
   tasks: [
     {
-      title: '',
-      created: new Date().getDate
-
+      title: 'Groceries',
+      content: 'Buy some groceries!'
+    },
+    {
+      title: 'Work',
+      content: 'Wake up for work!'
+    },
+    {
+      title: 'Treat Yoself',
+      content: 'Treat yoself foo!'
     }
   ]
 
