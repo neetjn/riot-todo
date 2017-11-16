@@ -31,6 +31,7 @@ npm run app:detached
 
 ### Technologies
 * Riot.js 3
+* riot-view-router
 * Sass
 * SkeletonCSS
 * animate.css
