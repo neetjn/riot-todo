@@ -4,7 +4,7 @@
 
 # riot-todo
 
-[![build](https://travis-ci.org/neetjn/pcc-mock-site.svg?branch=master)](https://travis-ci.org/neetjn/pcc-mock-site)
+[![build](https://travis-ci.org/neetjn/riot-todo.svg?branch=master)](https://travis-ci.org/neetjn/riot-todo)
 
 Todo web app created with Riot.js, SkeletonCSS, animate.css, and foundation-icons.
 
