@@ -1,6 +1,10 @@
 header-partial {
   @include shadow(2);
 
+  @media #{$mobile} {
+    text-align: center;
+  }
+
   display: block;
   width: 100%;
   padding: 1.5rem;
@@ -19,7 +23,7 @@ header-partial {
       a {
         @include transition(color .5s ease);
         &:hover {
-          color: $color-light-gray;
+          color: $color-pale-blue;
         }
         text-decoration: none;
         color: $color-ghost-white;

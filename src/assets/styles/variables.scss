@@ -2,9 +2,18 @@
  * Media Constants
  */
 
-$mobile: "(min-width: 550px) and (max-width: 767px)";
-$tablet: "(min-width: 768px) and (max-width: 1023px)";
-$desktop: "(min-width: 1024px)";
+$mobile: '(max-width: 767px)';
+$tablet: '(min-width: 768px) and (max-width: 1023px)';
+$desktop: '(min-width: 1024px)';
+
+$mobile-view-width: auto;
+$mobile-view-padding: 0.5rem;
+
+$tablet-view-width: 50rem;
+$tablet-view-padding: 1.5rem;
+
+$desktop-view-width: 83rem;
+$desktop-view-padding: 3rem;
 
 /**
  * Fonts
@@ -44,6 +53,7 @@ $color-layout-default:	#aaaaaa;
 $color-ghost-white: #f8f8ff;
 $color-metal-black: #1b1b1b;
 $color-light-gray: #d9ecff;
+$color-pale-blue: #c3e5ff;
 
 /**
  * Helper constants

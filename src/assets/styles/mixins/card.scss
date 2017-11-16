@@ -1,0 +1,11 @@
+@mixin card($degree: 1, $width: 'auto') {
+  @if $width != 'auto' {
+    width: $width;
+  }
+  @include shadow($degree);
+}
+
+@mixin card-centered($degree: 1, $width: 'auto') {
+  @include card($degree, $width);
+  @include centered-block();
+}

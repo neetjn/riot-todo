@@ -1,10 +1,19 @@
 code-sponsor {
-  @include shadow(1);
+  @include card();
 
-  display: block;
+  @media #{$desktop} {
+    @include centered-block($desktop-view-width + ( $desktop-view-padding * 2 ));
+  }
+
+  @media #{$tablet} {
+    @include centered-block($tablet-view-width + ( $tablet-view-padding * 2 ));
+  }
+
+  @media #{$mobile} {
+    display: none;
+  }
+
+  background-color: $color-ghost-white;
   margin-top: 4rem;
   margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: $color-ghost-white;
 }

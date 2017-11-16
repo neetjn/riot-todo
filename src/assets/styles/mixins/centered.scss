@@ -10,11 +10,3 @@
   }
   @include centered();
 }
-
-@mixin centered-mat-block($degree: 1, $width: 'auto') {
-  @if $width != 'auto' {
-    width: $width;
-  }
-  @include shadow($degree);
-  @include centered-block();
-}
