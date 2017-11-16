@@ -45,7 +45,9 @@ This app uses webpack with the [riot-tag-loader](https://github.com/riot/tag-loa
 
 To simplify and modernize routing, this app uses [riot-view-router]() rather than the vanilla routing mechanisms for Riot.js; allowing us to route using tag views.
 
-`app.tag` is our root tag, which should be mounted as soon as our router is instantiated.
+Rather than isolating functionality related to manipulating app data to individual tags and trying to funnel opts around, shared funtionality has been moved to `services`. This allows us to identify, control, and manage the manipulation of any data within our Riot.js application.
+
+`app.tag` is our root tag, which should be mounted as soon as our router is instantiated. Using this development pattern, no other riot tag should need to be manually mounted.
 
 ### Technologies
 
