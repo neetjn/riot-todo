@@ -4,16 +4,17 @@
 @import '~animate.css/animate.min.css';
 
 @import './variables.scss';
-@import './helpers/icons.scss';
-@import './helpers/lists.scss';
-@import './helpers/text.scss';
-@import './helpers/fonts.scss';
 
 @import './mixins/shadow.scss';
 @import './mixins/animations.scss';
 @import './mixins/transition.scss';
 @import './mixins/centered.scss';
 @import './mixins/card.scss';
+
+@import './helpers/icons.scss';
+@import './helpers/lists.scss';
+@import './helpers/text.scss';
+@import './helpers/fonts.scss';
 
 @import './components/header.scss';
 @import './components/footer.scss';
@@ -27,7 +28,7 @@ section#view {
 
 r-view {
   background-color: $color-ghost-white;
-  @include card();
+  @include card(2);
 
   @media #{$mobile}, #{$tablet} {
     margin-top: 3rem;

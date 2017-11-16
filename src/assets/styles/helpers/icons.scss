@@ -1,6 +1,10 @@
 .ico {
   display: inline-block;
 
+  &.ico-mat {
+    @include text-shadow(2);
+  }
+
   &.ico-left {
     padding-right: $ico-dist;
   }
