@@ -63,6 +63,6 @@ class ToDo {
 
 export default function(riot) {
   return {
-    $todo: new ToDo(Object.assign({}, mocks.tasks))
+    $todo: new ToDo(mocks.tasks.slice())
   }
 }
