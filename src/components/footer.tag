@@ -12,6 +12,7 @@
       <li>
         Designed with <i class="ico ico-fixed fi-heart" style="color: #d2232a;"></i> using SkeletonCSS
       </li>
+      <li>Copyright &copy; neetGroup 2017</li>
     </ul>
   </div>
 </footer-partial>

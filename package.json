@@ -18,6 +18,7 @@
     "animate.css": "^3.5.2",
     "foundation-icons": "^1.0.1",
     "riot": "3.7.3",
+    "riot-format": "^1.1.1",
     "riot-view-router": "0.0.4",
     "skeleton-css": "^2.0.4"
   },
