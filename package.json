@@ -1,7 +1,7 @@
 {
-  "name": "mock-site",
+  "name": "riot-todo-neetjn",
   "version": "1.0.0",
-  "description": "Mock site created with riot.js for testing py-component-controller.",
+  "description": "Todo web app created with Riot.js, SkeletonCSS, animate.css, and foundation-icons.",
   "main": "index.js",
   "scripts": {
     "setup": "npm install && npm run build",
