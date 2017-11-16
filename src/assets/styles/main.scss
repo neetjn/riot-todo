@@ -29,7 +29,7 @@ r-view {
   background-color: $color-ghost-white;
   @include card();
 
-  @media #{$mobile} {
+  @media #{$mobile}, #{$tablet} {
     margin-top: 3rem;
     padding: $mobile-view-padding;
     @include centered-block();

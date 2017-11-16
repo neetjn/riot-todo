@@ -1,15 +1,7 @@
 code-sponsor {
-  @include card();
+  @include card-centered();
 
-  @media #{$desktop} {
-    @include centered-block($desktop-view-width + ( $desktop-view-padding * 2 ));
-  }
-
-  @media #{$tablet} {
-    @include centered-block($tablet-view-width + ( $tablet-view-padding * 2 ));
-  }
-
-  @media #{$mobile} {
+  @media #{$mobile}, #{$tablet} {
     display: none;
   }
 
