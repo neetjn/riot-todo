@@ -1,11 +1,11 @@
 <todo-list>
-  <ul>
+  <ul class="unstyled">
     <li each={this.$todo.tasks}>
-      <h3>{title}</h3>
-    </li>
+      <todo-task>
+        <h4>
+          <input type="checkbox" checked={enabled}>
+          {title} - <small>{content}</small>
+        </h4>
+      </todo-task>
   </ul>
-
-  <script>
-    console.log(this.$todo.tasks)
-  </script>
 </todo-list>

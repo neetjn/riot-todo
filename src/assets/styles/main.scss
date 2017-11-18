@@ -25,6 +25,8 @@
 @import './components/create-todo.scss';
 @import './components/app.scss';
 
+@import './views/home.scss';
+
 section#view {
   display: block;
   flex: 1;
