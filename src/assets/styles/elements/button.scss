@@ -1,0 +1,14 @@
+button, .button {
+  @include card(1);
+  border-radius: 1px;
+  background-color: $color-default;
+  &.is-info {
+    background-color: $color-info;
+  }
+  &.is-warning {
+    background-color: $color-warning;
+  }
+  &.is-primary {
+    background-color: $color-primary;
+  }
+}

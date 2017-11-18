@@ -20,6 +20,6 @@
       <input type="checkbox">
       <span class="label-body">Send a copy to yourself</span>
     </label>
-    <input class="button-primary" type="submit" value="Submit">
+    <button class="is-default">Create Task</button>
   </form>
 </create-todo>

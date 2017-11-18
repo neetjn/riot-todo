@@ -9,6 +9,7 @@ import './components/header.tag'
 import './components/footer.tag'
 import './components/code-sponsor.tag'
 import './components/todo-list.tag'
+import './components/create-todo.tag'
 import './app.tag'
 
 format(riot)

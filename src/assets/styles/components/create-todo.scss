@@ -1,0 +1,5 @@
+create-todo {
+  @include card-centered(1);
+  padding: 1.5rem;
+  background-color: $color-dusk-gray;
+}
