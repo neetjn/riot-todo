@@ -6,6 +6,7 @@
           <input type="checkbox" checked={enabled}>
           {title} - <small>{content}</small>
         </h4>
+        <span>{format(created, 'date', 'yyyy-mm-dd')}</span>
       </todo-task>
   </ul>
 </todo-list>

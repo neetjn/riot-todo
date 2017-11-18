@@ -1,5 +1,9 @@
-todo-task {
-  @include card-centered();
-  padding: 1rem;
-  background-color: $color-celestial-gray;
+todo-list {
+  @include centered-block();
+
+  todo-task {
+    @include card-centered();
+    padding: 1rem;
+    background-color: $color-celestial-gray;
+  }
 }
