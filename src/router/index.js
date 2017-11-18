@@ -14,17 +14,20 @@ const states = [
  {
    name: 'home',
    route: '/',
-   tag:'home'
- },
+   tag: 'home',
+   title: 'Home'
+  },
  {
    name: '404',
    route: '/notfound',
-   tag:'not-found'
+   tag: 'not-found',
+   title: '404 Not Found'
  },
  {
    name: 'profile',
    route: '/profile/:username',
-   tag: 'profile'
+   tag: 'profile',
+   title: 'Profile'
  }
 ]
 
