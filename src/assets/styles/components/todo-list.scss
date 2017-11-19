@@ -5,5 +5,9 @@ todo-list {
     @include card-centered();
     padding: 1rem;
     background-color: $color-celestial-gray;
+
+    &.disabled {
+      opacity: 0.5;
+    }
   }
 }
