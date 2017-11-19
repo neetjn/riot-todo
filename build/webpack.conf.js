@@ -68,8 +68,7 @@ module.exports = {
 		}),
     new ExtractTextPlugin('dist.css'),
     new webpack.ProvidePlugin({
-      'riot': 'riot',
-      'format': 'format'
+      'riot': 'riot'
     })
   ]
 }

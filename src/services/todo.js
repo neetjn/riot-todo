@@ -35,8 +35,8 @@ class ToDo {
    * @param {object} task - Task object to push.
    */
   addTask(task) {
-    let created = new Date().getTime()
-    task.id = created.toString(16)
+    let created = new Date()
+    task.id = created.getTime().toString(16)
     task.created = created
     this.tasks.push(Object.assign({}, task))
   }
@@ -55,13 +55,13 @@ class ToDo {
    */
   editTask(task) {
     let found = this._findTaskById(task.id)
-    task.edited = new Date().getTime()
+    found.edited = new Date()
     this.tasks[0] = Object.assign(this.tasks[0], task)
   }
 
 }
 
-export default function(riot) {
+export default function() {
   return {
     $todo: new ToDo(mocks.tasks.slice())
   }
