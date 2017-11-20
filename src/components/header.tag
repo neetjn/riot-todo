@@ -2,7 +2,9 @@
   <div class="container">
     <div class="row">
       <div class="six columns">
-        <h1 class="logo animated slideInDown">To-Do Mock</h1>
+        <a href="#" r-sref="/profile/john">
+          <h1 class="logo animated slideInDown">To-Do</h1>
+        </a>
       </div>
       <div class="three columns">
         <img src="{riotLogo}" class="animated hinge" id="riot" alt="riot.js" />

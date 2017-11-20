@@ -14,6 +14,11 @@ header-partial {
   box-sizing: border-box;
   color: $color-ghost-white;
 
+  a h1 {
+    color: $color-ghost-white;
+    text-decoration: none;
+  }
+
   & img#riot {
     @include centered-block();
     margin-top: 1rem;
