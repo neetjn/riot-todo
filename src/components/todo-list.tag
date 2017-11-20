@@ -29,11 +29,9 @@
 
     deleteSelected() {
       const self = this
-
-      let disabled = self.tasks.filter((task) => {
+      self.tasks.filter((task) => {
         return !task.enabled
-      })
-      disabled.forEach((task) => {
+      }).forEach((task) => {
         self.$todo.deleteTask(task.id)
       })
     }
