@@ -23,7 +23,7 @@
 
   <alert class="is-warning animated fadeIn" if={ !tasks.length }>
     <h5 class="text-center">
-      <i class="ico ico-left fi-safety-cone"></i> No Tasks Found
+      <i class="ico ico-left fi-alert"></i> No Tasks Found
     </h5>
   </alert>
 

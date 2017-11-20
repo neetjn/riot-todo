@@ -1,4 +1,9 @@
 <create-todo>
+  <alert class="is-danger animated bounceIn" if={error}>
+    <p class="text-center">
+      <i class="ico ico-left fi-prohibited"></i> Form Not Completed
+    </p>
+  </alert>
   <form>
     <label for="taskAssignee">Assignee</label>
     <input
@@ -30,13 +35,22 @@
     createTask() {
       const self = this
 
-      self.$todo.addTask({
-        assignee: this.refs.taskAssignee.value,
-        title: this.refs.taskTitle.value,
-        content: this.refs.taskContent.value
-      }).then(() => {
-        self.parent.update()
-      })
+      let assignee = this.refs.taskAssignee.value.trim()
+      let title = this.refs.taskTitle.value.trim()
+      let content = this.refs.taskContent.value.trim()
+      if (!assignee.length || !title.length || !content.length)
+        self.error = true
+      else {
+        self.$todo.addTask({
+          assignee,
+          title,
+          content
+        }).then(() => {
+          self.error = false
+          self.parent.update()
+        })
+      }
+      self.update()
     }
   </script>
 </create-todo>
