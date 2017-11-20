@@ -38,6 +38,7 @@
       let assignee = this.refs.taskAssignee.value.trim()
       let title = this.refs.taskTitle.value.trim()
       let content = this.refs.taskContent.value.trim()
+
       if (!assignee.length || !title.length || !content.length)
         self.error = true
       else {
