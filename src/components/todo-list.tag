@@ -3,7 +3,7 @@
 
   <ul class="unstyled">
     <li each={ tasks }>
-      <todo-task class={ disabled: !enabled } onclick={ parent.toggle }>
+      <todo-task id={'task-' + id} class={ disabled: !enabled } onclick={ parent.toggle }>
         <h4>
           <input type="checkbox" checked={ enabled }>
           {title} - <small>{content}</small>
@@ -13,7 +13,7 @@
         </span>
         <br />
         <span>
-          <i class="ico ico-left fi-torso-business"></i> { assignee }
+          <i class="ico ico-left fi-torso-business"></i> { assignee || 'anonymous' }
         </span>
       </todo-task>
   </ul>
@@ -29,10 +29,23 @@
 
     deleteSelected() {
       const self = this
+
       self.tasks.filter((task) => {
         return !task.enabled
       }).forEach((task) => {
-        self.$todo.deleteTask(task.id)
+        var taskEl = document.querySelector(`#task-${task.id}`)
+        var opacity = parseFloat(getComputedStyle(taskEl).opacity)
+        var fade = setInterval(() => {
+          if (opacity > 0) {
+            opacity -= 0.10
+            taskEl.setAttribute('style', `opacity: ${ opacity }`)
+          }
+          else {
+            self.$todo.deleteTask(task.id)
+            self.update()
+            clearInterval(fade)
+          }
+        }, 100)
       })
     }
   </script>
