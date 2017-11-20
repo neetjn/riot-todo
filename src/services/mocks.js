@@ -7,7 +7,7 @@ export default {
       content: 'Buy some groceries!',
       assignee: 'John',
       created: new Date(1511141319000),
-      enabled: true
+      completed: false
     },
     {
       id: 2,
@@ -15,7 +15,7 @@ export default {
       content: 'Wake up for work!',
       assignee: 'Jane',
       created: new Date(1510450119000),
-      enabled: false
+      completed: true
     },
     {
       id: 3,
@@ -23,7 +23,7 @@ export default {
       content: 'Treat yoself foo!',
       assignee: 'John',
       created: new Date(1507944519000),
-      enabled: true
+      completed: false
     }
   ]
 

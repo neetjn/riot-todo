@@ -1,0 +1,20 @@
+alert {
+  @include card-centered(2);
+  cursor: default;
+  color: $color-ghost-white;
+  background-color: $color-default;
+  padding: 0.5rem;
+
+  &.is-info {
+    background-color: $color-info;
+  }
+  &.is-success {
+    background-color: $color-success;
+  }
+  &.is-warning {
+    background-color: $color-warning;
+  }
+  &.is-danger {
+    background-color: $color-danger;
+  }
+}

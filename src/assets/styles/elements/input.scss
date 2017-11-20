@@ -1,0 +1,19 @@
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+  @include card(1);
+  @include transition(box-shadow 0.5s ease);
+  border: none;
+  border-radius: 0;
+  padding: 1rem 1.5rem;
+
+  &:focus, &:hover {
+    border: none;
+  }
+
+  &:hover {
+    @include card(2);
+    @include transition(box-shadow 0.2s ease);
+  }
+}

@@ -16,7 +16,9 @@
 @import './helpers/text.scss';
 @import './helpers/fonts.scss';
 
+@import './elements/alert.scss';
 @import './elements/button.scss';
+@import './elements/input.scss';
 
 @import './components/header.scss';
 @import './components/footer.scss';
@@ -33,8 +35,8 @@ section#view {
 }
 
 r-view {
-  background-color: $color-ghost-white;
   @include card(2);
+  background-color: $color-ghost-white;
 
   @media #{$mobile}, #{$tablet} {
     margin-top: 3rem;

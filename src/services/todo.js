@@ -30,10 +30,16 @@ class ToDo {
    * @param {object} task - Task object to push.
    */
   addTask(task) {
-    let created = new Date()
-    task.id = created.getTime().toString(16)
-    task.created = created
-    this.tasks.push(Object.assign({}, task))
+    const self = this
+
+    return new Promise((resolve) => {
+      let created = new Date()
+      task.id = created.getTime().toString(16)
+      task.created = created
+      task.completed = false
+      self.tasks.push(task)
+      resolve()
+    })
   }
 
   /**
@@ -41,7 +47,12 @@ class ToDo {
    * @param {string} taskId - Id of task to delete.
    */
   deleteTask(taskId) {
-    this.tasks.splice(this._findTaskById(taskId, 1), 1)
+    const self = this
+
+    return new Promise((resolve) => {
+      self.tasks.splice(this._findTaskById(taskId, 1), 1)
+      resolve()
+    })
   }
 
   /**
@@ -49,9 +60,14 @@ class ToDo {
    * @param {object} task - Updated task object.
    */
   editTask(taskId, task) {
-    let found = this.tasks[this._findTaskById(taskId)]
-    found = Object.assign(found, task)
-    found.edited = new Date()
+    const self = this
+
+    return new Promise((resolve) => {
+      let found = self.tasks[this._findTaskById(taskId)]
+      found = Object.assign(found, task)
+      found.edited = new Date()
+      resolve()
+    })
   }
 
 }
