@@ -1,3 +1,3 @@
 <profile>
-  <h1>{{this.opts.username}}'s Profile</h1>
+  <h1>{opts.username}'s Profile</h1>
 </profile>

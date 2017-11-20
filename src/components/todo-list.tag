@@ -10,7 +10,7 @@
           <i class="ico ico-left fi-calendar"></i> { format(created, 'date', 'yyyy-mm-dd | h:MM TT').toString() }
         </span>
         <br />
-        <span r-sref={ '/profile/' + assignee } id="assignee">
+        <span r-sref={ '/profile/' + assignee } id="assignee" onclick={  }>
           <i class="ico ico-left fi-torso-business"></i> { assignee || 'anonymous' }
         </span>
       </todo-task>
@@ -31,7 +31,8 @@
     this.tasks = this.$todo.tasks
 
     toggle(e) {
-      e.item.completed = !e.item.completed
+      if (e.target.id != 'assignee')
+        e.item.completed = !e.item.completed
     }
 
     deleteCompleted() {
