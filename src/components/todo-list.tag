@@ -11,6 +11,10 @@
         <span>
           <i class="ico ico-left fi-calendar"></i> { format(created, 'date', 'yyyy-mm-dd').toString() }
         </span>
+        <br />
+        <span>
+          <i class="ico ico-left fi-torso-business"></i> { assignee }
+        </span>
       </todo-task>
   </ul>
 
@@ -26,9 +30,11 @@
     deleteSelected() {
       const self = this
 
-      self.tasks.forEach((task) => {
-        if (!task.enabled)
-          self.$todo.deleteTask(task.id)
+      let disabled = self.tasks.filter((task) => {
+        return !task.enabled
+      })
+      disabled.forEach((task) => {
+        self.$todo.deleteTask(task.id)
       })
     }
   </script>

@@ -5,21 +5,24 @@ export default {
       id: 1,
       title: 'Groceries',
       content: 'Buy some groceries!',
-      created: new Date(),
+      assignee: 'John',
+      created: new Date(1511141319000),
       enabled: true
     },
     {
       id: 2,
       title: 'Work',
       content: 'Wake up for work!',
-      created: new Date(),
+      assignee: 'Jane',
+      created: new Date(1510450119000),
       enabled: false
     },
     {
       id: 3,
       title: 'Treat Yoself',
       content: 'Treat yoself foo!',
-      created: new Date(),
+      assignee: 'John',
+      created: new Date(1507944519000),
       enabled: true
     }
   ]
