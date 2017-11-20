@@ -15,13 +15,8 @@ class ToDo {
    * @param {string} taskId - Id of task to find.
    */
   _findTaskById(taskId) {
-    var task
-
-    this.tasks.find((task, index) => {
-      if (task.id == taskId) {
-        task = index
-        return true
-      }
+    var task = this.tasks.findIndex((task) => {
+      return task.id == taskId
     })
 
     if (typeof task == 'undefined')
@@ -46,17 +41,17 @@ class ToDo {
    * @param {string} taskId - Id of task to delete.
    */
   deleteTask(taskId) {
-    this.tasks.splice(this._findTaskById(taskId, 1))
+    this.tasks.splice(this._findTaskById(taskId, 1), 1)
   }
 
   /**
    * Modify existing task.
    * @param {object} task - Updated task object.
    */
-  editTask(task) {
-    let found = this._findTaskById(task.id)
+  editTask(taskId, task) {
+    let found = this.tasks[this._findTaskById(taskId)]
+    found = Object.assign(found, task)
     found.edited = new Date()
-    this.tasks[0] = Object.assign(this.tasks[0], task)
   }
 
 }

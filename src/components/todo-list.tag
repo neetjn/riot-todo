@@ -14,13 +14,22 @@
       </todo-task>
   </ul>
 
-  <button class="is-danger">Delete Selected</button>
+  <button class="is-danger" onclick={ deleteSelected }>Delete Selected</button>
 
   <script>
     this.tasks = this.$todo.tasks
 
     toggle(e) {
       e.item.enabled = !e.item.enabled
+    }
+
+    deleteSelected() {
+      const self = this
+
+      self.tasks.forEach((task) => {
+        if (!task.enabled)
+          self.$todo.deleteTask(task.id)
+      })
     }
   </script>
 </todo-list>
