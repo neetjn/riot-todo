@@ -88,7 +88,6 @@ npm run app:detached
 
 Contributing guidelines are as follows,
 
-* When adding new features to the mock website, make sure it doesn't effect any existing py-component-controller unit tests.
 * Branches for bugs and features should be structued like so, `issue-x-username`.
 * Include your name and email in the contributors list.
 
