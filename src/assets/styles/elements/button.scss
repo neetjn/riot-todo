@@ -1,14 +1,44 @@
 button, .button {
   @include card(1);
+  @include transition(box-shadow .4s ease);
+  @include transition(background-color .4s ease);
+  border: none;
+  color: $color-ghost-white;
   border-radius: 1px;
   background-color: $color-default;
+  &:hover {
+    background-color: darken($color-default, 10%);
+  }
   &.is-info {
     background-color: $color-info;
+    &:hover {
+      background-color: darken($color-info, 10%);
+    }
+  }
+  &.is-success {
+    background-color: $color-success;
+    &:hover {
+      background-color: darken($color-success, 10%);
+    }
   }
   &.is-warning {
     background-color: $color-warning;
+    &:hover {
+      background-color: darken($color-warning, 10%);
+    }
   }
-  &.is-primary {
-    background-color: $color-primary;
+  &.is-danger {
+    background-color: $color-danger;
+    &:hover {
+      background-color: darken($color-danger, 10%);
+    }
+  }
+
+  &:hover, &:focus {
+    @include card(2);
+    @include transition(box-shadow .8s ease);
+    @include transition(background-color .4s ease);
+    border: none;
+    color: $color-ghost-white;
   }
 }

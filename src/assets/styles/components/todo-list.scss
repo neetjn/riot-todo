@@ -3,11 +3,17 @@ todo-list {
 
   todo-task {
     @include card-centered();
+    @include transition(opacity .5s ease);
     padding: 1rem;
-    background-color: $color-celestial-gray;
+    background-color: $color-pale-yellow;
 
     &.disabled {
       opacity: 0.5;
+      background-color: $color-celestial-gray;
+    }
+
+    & * {
+      cursor: default;
     }
   }
 }
