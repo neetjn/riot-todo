@@ -15,6 +15,10 @@ todo-list {
     & * {
       cursor: default;
     }
+
+    & #assignee {
+      cursor: pointer;
+    }
   }
 
   alert {

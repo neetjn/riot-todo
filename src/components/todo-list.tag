@@ -10,9 +10,9 @@
           <i class="ico ico-left fi-calendar"></i> { format(created, 'date', 'yyyy-mm-dd | h:MM TT').toString() }
         </span>
         <br />
-        <a r-sref={ '/profile/' + assignee }>
+        <span r-sref={ '/profile/' + assignee } id="assignee">
           <i class="ico ico-left fi-torso-business"></i> { assignee || 'anonymous' }
-        </a>
+        </span>
       </todo-task>
     </li>
   </ul>

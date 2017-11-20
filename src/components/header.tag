@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="six columns">
-        <a href="#" r-sref="/profile/john">
+        <a r-sref="/">
           <h1 class="logo animated slideInDown">To-Do</h1>
         </a>
       </div>
