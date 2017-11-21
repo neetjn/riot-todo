@@ -27,7 +27,7 @@ const states = [
    name: 'profile',
    route: '/profile/:username',
    tag: 'profile',
-   title: 'Profile'
+   title: '<username>\'s Profile'
  }
 ]
 

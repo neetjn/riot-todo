@@ -14,7 +14,8 @@ header-partial {
   box-sizing: border-box;
   color: $color-ghost-white;
 
-  a h1 {
+  a h1.logo {
+    cursor: pointer;
     color: $color-ghost-white;
     text-decoration: none;
   }

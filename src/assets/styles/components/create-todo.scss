@@ -1,6 +1,7 @@
 create-todo {
   @include card-centered(1);
   padding: 1.5rem;
+  padding-bottom: 3rem;
   background-color: $color-dusk-gray;
 
   alert {

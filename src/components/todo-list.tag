@@ -17,7 +17,7 @@
     </li>
   </ul>
 
-  <button class="is-danger" onclick={ deleteCompleted } if={ tasks.length }>
+  <button class="is-danger u-pull-left" onclick={ deleteCompleted } if={ tasks.length }>
     <i class="ico ico-left fi-trash"></i> Delete Completed
   </button>
 
@@ -28,7 +28,10 @@
   </alert>
 
   <script>
-    this.tasks = this.$todo.tasks
+    if (this.opts.filter)
+      this.tasks = this.$todo.tasks.filter((task) => task.assignee == this.opts.filter)
+    else
+      this.tasks = this.$todo.tasks
 
     toggle(e) {
       if (e.target.id != 'assignee')
@@ -51,6 +54,8 @@
           else {
             self.$todo.deleteTask(task.id)
             self.update()
+            try { taskEl.parentElement.removeChild(taskEl) }
+            catch(Exception) {}
             clearInterval(fade)
           }
         }, 100)

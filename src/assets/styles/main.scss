@@ -39,18 +39,21 @@ r-view {
   background-color: $color-ghost-white;
 
   @media #{$mobile}, #{$tablet} {
-    margin-top: 3rem;
-    padding: $mobile-view-padding;
     @include centered-block();
+    margin-top: 2rem;
+    padding: $mobile-view-padding;
+    padding-bottom: 6rem;
   }
 
   @media #{$tablet} {
-    padding: $tablet-view-padding;
     @include centered-block($tablet-view-width);
+    padding: $tablet-view-padding;
+    padding-bottom: 6rem;
   }
 
   @media #{$desktop} {
-    padding: $desktop-view-padding;
     @include centered-block($desktop-view-width);
+    padding: $desktop-view-padding;
+    padding-bottom: 6rem;
   }
 }

@@ -28,7 +28,7 @@
       id="taskContent"
       ref="taskContent"></textarea>
 
-    <button class="is-success" type="button" onclick={ createTask }>Create Task</button>
+    <button class="is-success u-pull-right" type="button" onclick={ createTask }>Create Task</button>
   </form>
 
   <script>
