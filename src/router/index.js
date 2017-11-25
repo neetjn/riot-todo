@@ -28,6 +28,12 @@ const states = [
    route: '/profile/:username',
    tag: 'profile',
    title: '<username>\'s Profile'
+ },
+ {
+   name: 'task',
+   route: '/task/:taskId',
+   tag: 'task',
+   title: 'Task'
  }
 ]
 
