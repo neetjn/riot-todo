@@ -31,4 +31,4 @@ const states = [
  }
 ]
 
-export default new Router(options, states)
+export default new Router.install(riot, options, states)

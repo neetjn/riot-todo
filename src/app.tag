@@ -6,5 +6,5 @@
   </section>
   <footer-partial></footer-partial>
 
-  this.$router.start()
+  this.router.start()
 </app>
