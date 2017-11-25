@@ -28,10 +28,7 @@
   </alert>
 
   <script>
-    if (this.opts.filter)
-      this.tasks = this.$todo.tasks.filter((task) => task.assignee == this.opts.filter)
-    else
-      this.tasks = this.$todo.tasks
+    this.tasks = this.$todo.tasks
 
     toggle(e) {
       if (e.target.id != 'assignee')
