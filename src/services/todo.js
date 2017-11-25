@@ -8,6 +8,7 @@ class ToDo {
    */
   constructor(tasks) {
     this.tasks = tasks
+    riot.observable(this)
   }
 
   /**
@@ -38,6 +39,7 @@ class ToDo {
       task.created = created
       task.completed = false
       self.tasks.push(task)
+      this.trigger('add')
       resolve()
     })
   }
@@ -51,6 +53,7 @@ class ToDo {
 
     return new Promise((resolve) => {
       self.tasks.splice(this._findTaskById(taskId, 1), 1)
+      this.trigger('delete')
       resolve()
     })
   }
@@ -66,6 +69,7 @@ class ToDo {
       let found = self.tasks[this._findTaskById(taskId)]
       found = Object.assign(found, task)
       found.edited = new Date()
+      this.trigger('edit')
       resolve()
     })
   }

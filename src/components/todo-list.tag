@@ -17,7 +17,7 @@
     </li>
   </ul>
 
-  <button class="is-danger u-pull-left" onclick={ deleteCompleted } if={ tasks.length }>
+  <button id="deleteTasks" class="is-danger u-pull-left" onclick={ deleteCompleted } if={ tasks.length }>
     <i class="ico ico-left fi-trash"></i> Delete Completed
   </button>
 
