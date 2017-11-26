@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "setup": "npm install && npm run build",
-    "build": "node_modules/.bin/cross-env NODE_ENV=production NODE_ENV=production node_modules/.bin/webpack --config build/webpack.conf.js",
-    "build:dev": "node_modules/.bin/webpack --config build/webpack.conf.js",
+    "build": "node_modules/.bin/webpack --config build/webpack.conf.js",
     "app": "node_modules/.bin/webpack-dev-server --config build/webpack.conf.js --port 3000",
     "app:detached": "nohup npm run app &",
     "lint": "node_modules/.bin/eslint src/**.js",

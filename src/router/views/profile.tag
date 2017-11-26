@@ -1,10 +1,8 @@
 <profile class="text-center">
-  <h1 class="text-center">{ opts.username }'s Profile</h1>
-
+  <h1>{ opts.username }'s Profile</h1>
   <h4>
     <small>Latest Task:</small> <a r-sref="/task/{this.latest.id}">{ this.latest.title }</a>
   </h4>
-
   <h2>
     Stats <small><i class="ico ico-right fi-graph-bar"></i></small>
   </h2>
@@ -25,6 +23,9 @@
 
   <script>
     this.tasks = this.$todo.tasks.filter(task => task.assignee === this.opts.username)
+    if (!this.tasks.length)
+      this.router.navigate('/')
+
     this.latest = this.tasks.sort((a, b) => a.created.getTime() < b.created.getTime())[0]
 
     total() {
@@ -38,8 +39,5 @@
     incomplete() {
       return this.tasks.filter(task => !task.completed).length
     }
-
-    if (!this.tasks.length)
-      this.router.navigate('/')
   </script>
 </profile>
