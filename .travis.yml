@@ -7,3 +7,9 @@ install:
 script:
   - npm run build
   - npm run test
+deploy:
+  provider: firebase
+  token:
+    secure: "CeoSUB1I0oHyBR1fKPXtK8B3dxZarAVOY7T5iNJFIo8Sa/qkcSDxRpxynEHyPik/NMlvM4PdRbzoclBmMQ9MaMcJjZ2Z6eKb7d5WFRymtn0HKQ1zQGmI66a4wkuGnKGRJRmZebqmJLiyxgLx6PnDW5ul7ouO+zoUXdBnNVTRD7PPJ/8wGY5Maiuxxjn70IkdD3B4uZOMvgWplYuzM0S/Tdt3bNA4upoKR/lJpnHBj82hTV6mXdlqB/vFtrbR8LPQkHyiJjX1+ANCy/H+KIwLZ11N1/zEB/nqweJ6+MY5x2S7nS0tfdGnqPGtb/vsvSzsiuVy3o/7c0z7Ny5PAKxqtKbx3W6Wy5Y+8lIdu+18tpndlNkaNLgfVx3VFEVWoexGr03Y9DN0Pl2xwgq52O8uSVHI2ied7SQH9JMXEnI11+P5DsHOKpnWExj5+dNqHzh8+BG6cfyfPvICVkaAwuwJ3rExiujVP+xoX8j6sWro7dQO4rRNzH3z6Tx+/mH9nzUCCPrlOFAcGpKAFz9sfY8PCxhwpV8UX9X4esnKOZbXfjOQDMvV7q8RxpspmS2EUAFaxgGohWQXoW4Ay+vsnDCtF4xGeS10pML+1X8d2/h8Rx+9GgEU2ANSyVQtLqZW1EI6IgCxQIhMTkTu4c3AG57iEfUJFhR04jgd0BNi2q4pyWc="
+  on:
+    branch: master
