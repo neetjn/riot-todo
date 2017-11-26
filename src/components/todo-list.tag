@@ -17,8 +17,13 @@
     </li>
   </ul>
 
-  <button id="deleteTasks" class="is-danger u-pull-left" onclick={ deleteCompleted } if={ tasks.length }>
-    <i class="ico ico-left fi-trash"></i> Delete Completed
+  <button id="deleteTasks"
+          class={ is-danger: hasCompletedTasks(), is-disabled: !hasCompletedTasks(), u-pull-left: true }
+          class="is-danger u-pull-left"
+          disabled={ !hasCompletedTasks() }
+          onclick={ deleteCompleted }
+          if={ tasks.length }>
+          <i class="ico ico-left fi-trash"></i> Delete Completed
   </button>
 
   <alert class="is-warning animated fadeIn" if={ !tasks.length }>
@@ -33,6 +38,10 @@
     toggle(e) {
       if (e.target.id != 'assignee')
         e.item.completed = !e.item.completed
+    }
+
+    hasCompletedTasks() {
+      return this.tasks.find(task => task.completed) ? true : false
     }
 
     deleteCompleted() {
