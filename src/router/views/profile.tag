@@ -1,20 +1,43 @@
-<profile>
+<profile class="text-center">
   <h1 class="text-center">{ opts.username }'s Profile</h1>
-  <div class="row">
-    <div class="six columns">
-      <h5>Number of tasks: { this.tasks.length }</h5>
-      <h5>
-        Latest Task: <a r-sref="/tasks/{this.latest.id}">{ this.latest.title }</a>
-      </h5>
-    </div>
-    <div class="six columns">
-      <h1></h1>
-    </div>
+
+  <h4>
+    <small>Latest Task:</small> <a r-sref="/tasks/{this.latest.id}">{ this.latest.title }</a>
+  </h4>
+
+  <h2>
+    Stats <small><i class="ico ico-right fi-graph-bar"></i></small>
+  </h2>
+  <div id="stats">
+    <table>
+      <tr>
+        <th>Total</th>
+        <th>Completed</th>
+        <th>Incomplete</th>
+      </tr>
+      <tr>
+        <td>{ total() }</td>
+        <td>{ completed() }</td>
+        <td>{ incomplete() }</td>
+      </tr>
+    </table>
   </div>
 
   <script>
     this.tasks = this.$todo.tasks.filter(task => task.assignee === this.opts.username)
     this.latest = this.tasks.sort((a, b) => a.created.getTime() < b.created.getTime())[0]
+
+    total() {
+      return this.tasks.length
+    }
+
+    completed() {
+      return this.tasks.filter(task => task.completed).length
+    }
+
+    incomplete() {
+      return this.tasks.filter(task => !task.completed).length
+    }
 
     if (!this.tasks.length)
       this.router.navigate('/')

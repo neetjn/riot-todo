@@ -1,0 +1,10 @@
+div#stats {
+  width: 100%;
+
+  table {
+    margin: auto;
+    & * {
+      @extend .text-center;
+    }
+  }
+}

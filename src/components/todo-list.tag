@@ -19,7 +19,6 @@
 
   <button id="deleteTasks"
           class={ is-danger: hasCompletedTasks(), is-disabled: !hasCompletedTasks(), u-pull-left: true }
-          class="is-danger u-pull-left"
           disabled={ !hasCompletedTasks() }
           onclick={ deleteCompleted }
           if={ tasks.length }>
