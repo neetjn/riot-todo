@@ -2,7 +2,7 @@
   <h1 class="text-center">{ opts.username }'s Profile</h1>
 
   <h4>
-    <small>Latest Task:</small> <a r-sref="/tasks/{this.latest.id}">{ this.latest.title }</a>
+    <small>Latest Task:</small> <a r-sref="/task/{this.latest.id}">{ this.latest.title }</a>
   </h4>
 
   <h2>
