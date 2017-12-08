@@ -15,9 +15,6 @@ textarea {
 
   &:focus {
     cursor: text;
-  }
-
-  &:hover {
     @include card(2);
     @include transition(box-shadow 0.2s ease);
   }
