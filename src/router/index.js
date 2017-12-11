@@ -5,10 +5,10 @@ import './views/profile.tag'
 import './views/task.tag'
 import './views/not-found.tag'
 
-const options = {
+const settings = {
   debugging: true,
-  defaultState: 'home',
-  fallbackState: '404'
+  default: 'home',
+  fallback: '404'
 }
 
 const states = [
@@ -38,4 +38,4 @@ const states = [
   }
 ]
 
-export default new Router.install(riot, options, states)
+export default new Router.install(riot, settings, states)
