@@ -1,7 +1,7 @@
 import './assets/styles/main.scss'
 
 import riot from 'riot'
-import './router'
+import router from './router'
 import format from 'riot-format'
 import todo from './services/todo'
 
