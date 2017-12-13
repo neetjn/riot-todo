@@ -1,5 +1,6 @@
 import './assets/styles/main.scss'
 
+/*eslint-disable no-unused-vars */
 import riot from 'riot'
 import router from './router'
 import format from 'riot-format'
@@ -14,3 +15,4 @@ import './app.tag'
 format(riot)
 riot.mixin(todo())
 riot.mount('app')
+/*eslint-enable no-unused-vars */
