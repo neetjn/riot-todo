@@ -35,7 +35,7 @@
     this.riotLogo = require('../assets/images/riot240x.png')
 
     setTimeout(() => {
-      this.refs.logo.style.opacity = '0'
+      this.refs.logo.style.visibility = 'hidden'
       // # py-component-controller feature
     }, 2000)
   </script>
