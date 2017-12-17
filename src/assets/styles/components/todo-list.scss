@@ -17,7 +17,13 @@ todo-list {
     }
 
     & #assignee {
+      @include transition(opacity .5s ease);
       cursor: pointer;
+      color: $color-info;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 
