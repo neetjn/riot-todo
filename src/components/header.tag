@@ -12,17 +12,17 @@
       <div class="three columns">
         <ul id="social" class="inline unstyled">
           <li>
-            <a title="twitter" href="https://twitter.com/neet_jn">
+            <a title="twitter" href="https://twitter.com/neet_jn" target="_blank">
               <i class="ico ico-mat fi-social-twitter"></i>
             </a>
           </li>
           <li>
-            <a title="linkedin" href="https://www.linkedin.com/in/john-nolette-69ba72132/">
+            <a title="linkedin" href="https://www.linkedin.com/in/john-nolette-69ba72132/" target="_blank">
               <i class="ico ico-mat fi-social-linkedin"></i>
             </a>
           </li>
           <li>
-            <a title="github" href="https://github.com/neetjn">
+            <a title="github" href="https://github.com/neetjn" target="_blank">
               <i class="ico ico-mat fi-social-github"></i>
             </a>
           </li>
