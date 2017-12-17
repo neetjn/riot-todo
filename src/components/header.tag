@@ -7,7 +7,7 @@
         </a>
       </div>
       <div class="three columns">
-        <img src="{riotLogo}" class="animated hinge" id="riot" alt="riot.js" />
+        <img src="{riotLogo}" class="animated hinge" id="riot" ref="logo" alt="riot.js" />
       </div>
       <div class="three columns">
         <ul id="social" class="inline unstyled">
@@ -33,5 +33,10 @@
 
   <script>
     this.riotLogo = require('../assets/images/riot240x.png')
+
+    setTimeout(() => {
+      this.refs.logo.style.opacity = '0'
+      // # py-component-controller feature
+    }, 2000)
   </script>
 </header-partial>
