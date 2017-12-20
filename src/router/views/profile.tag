@@ -22,6 +22,8 @@
   </div>
 
   <script>
+    this.opts.username = decodeURI(this.opts.username)
+
     this.tasks = this.$todo.tasks.filter(task => task.assignee === this.opts.username)
     if (!this.tasks.length)
       this.router.navigate('/')
