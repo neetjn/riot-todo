@@ -36,7 +36,7 @@ const router = new Router(riot, {
   debugging: true,
   default: 'home',
   fallback: '404',
-  'title': 'riot-todo'
+  title: 'riot-todo'
 })
 
 states.forEach(state => router.add(state))
