@@ -84,7 +84,7 @@ npm run app:detached
 
 Contributing guidelines are as follows,
 
-* Branches for bugs and features should be structued like so, `issue-x-username`.
+* Branches for bugs and features should be structured like so, `issue-x-username`.
 * Include your name and email in the contributors list.
 
 ---
