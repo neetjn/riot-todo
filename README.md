@@ -39,7 +39,7 @@ src/
 
 This app uses webpack with the [riot-tag-loader](https://github.com/riot/tag-loader) to help bundle tags and other resources.
 
-To simplify and modernize routing, this app uses [riot-view-router]() rather than the vanilla routing mechanisms for Riot.js; allowing us to route using tag views.
+To simplify and modernize routing, this app uses [riot-view-router](https://github.com/neetjn/riot-view-router) rather than the vanilla routing mechanisms for Riot.js; allowing us to route using tag views.
 
 Rather than isolating functionality related to manipulating app data to individual tags and trying to funnel opts around, shared funtionality has been moved to `services`. This allows us to identify, control, and manage the manipulation of any data within our Riot.js application.
 
