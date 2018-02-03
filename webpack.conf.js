@@ -1,17 +1,12 @@
 const path = require('path')
 const webpack = require('webpack')
-
-function resolve (dir) {
-  return path.join(__dirname, '..', dir)
-}
-
 const GoogleFontsPlugin = require('google-fonts-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: resolve('./dist'),
+    path: path.join(__dirname, './dist'),
     publicPath: 'dist/',
     filename: 'dist.js',
     libraryTarget: 'umd',
