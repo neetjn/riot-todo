@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "setup": "npm install && npm run build",
-    "build": "node_modules/.bin/webpack --config build/webpack.conf.js",
-    "app": "node_modules/.bin/webpack-dev-server --config build/webpack.conf.js --port 3000",
+    "build": "node_modules/.bin/webpack --config webpack.conf.js",
+    "app": "node_modules/.bin/webpack-dev-server --config webpack.conf.js --port 3000",
     "app:detached": "nohup npm run app &",
     "lint": "node_modules/.bin/eslint src/**.js",
     "test": "npm run lint"
