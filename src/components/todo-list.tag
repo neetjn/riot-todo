@@ -14,10 +14,10 @@
             { task.created }
           </span>
           <br />
-          <span r-sref={ '/profile/' + encodeURI(task.assignee) } id="assignee">
+          <a href={ route(['profile', task.assignee]) } id="assignee">
             <i class="ico ico-left fi-torso-business"></i>
             { task.assignee || 'anonymous' }
-          </span>
+          </a>
         </todo-task>
       </li>
     </ul>
@@ -38,6 +38,7 @@
 
   <script>
     import panime from '@exah/promise-animejs'
+
     const self = this
     self.tasks = self.$todo.tasks
 
