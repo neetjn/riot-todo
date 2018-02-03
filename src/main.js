@@ -1,18 +1,12 @@
 import './assets/styles/main.scss'
 
-/*eslint-disable no-unused-vars */
 import riot from 'riot'
-import router from './router'
-import format from 'riot-format'
-import todo from './services/todo'
+import ToDo from './services/todo'
+import mock from './services/mocks'
 
-import './components/header.tag'
-import './components/footer.tag'
-import './components/todo-list.tag'
-import './components/create-todo.tag'
-import './app.tag'
-
-format(riot)
-riot.mixin(todo())
+riot.mixin({ $todo: new ToDo(riot, mock.tasks) })
 riot.mount('app')
-/*eslint-enable no-unused-vars */
+
+import './router'
+import './components'
+import './app.tag'

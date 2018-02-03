@@ -32,9 +32,9 @@
   </form>
 
   <script>
-    createTask() {
-      const self = this
+    const self = this
 
+    createTask() {
       let assignee = this.refs.taskAssignee.value.trim()
       let title = this.refs.taskTitle.value.trim()
       let content = this.refs.taskContent.value.trim()
@@ -46,12 +46,8 @@
           assignee,
           title,
           content
-        }).then(() => {
-          self.error = false
-          self.parent.update()
         })
       }
-      self.update()
     }
   </script>
 </create-todo>

@@ -5,7 +5,14 @@ import './views/profile.tag'
 import './views/task.tag'
 import './views/not-found.tag'
 
-const states = [
+const router = new Router(riot, {
+  debugging: true,
+  default: 'home',
+  fallback: '404',
+  title: 'riot-todo'
+})
+
+router.add([
   {
     name: 'home',
     route: '/',
@@ -30,15 +37,6 @@ const states = [
     tag: 'not-found',
     title: '404 Not Found'
   }
-]
-
-const router = new Router(riot, {
-  debugging: true,
-  default: 'home',
-  fallback: '404',
-  title: 'riot-todo'
-})
-
-states.forEach(state => router.add(state))
+])
 
 export default router

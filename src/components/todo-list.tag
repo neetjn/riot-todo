@@ -1,29 +1,34 @@
 <todo-list>
-  <ul class="unstyled" if={ tasks.length }>
-    <li each={ tasks } class="animated fadeIn">
-      <todo-task id={'task-' + id} class={ disabled: completed } onclick={ parent.toggle }>
-        <h4>
-          <input type="checkbox" checked={ completed }>
-          {title} - <small>{content}</small>
-        </h4>
-        <span>
-          <i class="ico ico-left fi-calendar"></i> { format(created, 'date', 'yyyy-mm-dd | h:MM TT').toString() }
-        </span>
-        <br />
-        <span r-sref={ '/profile/' + encodeURI(assignee) } id="assignee">
-          <i class="ico ico-left fi-torso-business"></i> { assignee || 'anonymous' }
-        </span>
-      </todo-task>
-    </li>
-  </ul>
+  <virtual if={ tasks.length }>
+    <ul class="unstyled">
+      <li ref="tasks" each={ task in tasks }>
+        <todo-task id={'task-' + task.id}
+                   class={ disabled: task.completed }
+                   click={ parent.toggle }>
+          <h4>
+            <input type="checkbox" checked={ task.completed } />
+            {task.title} - <small>{task.content}</small>
+          </h4>
+          <span>
+            <i class="ico ico-left fi-calendar"></i>
+            { task.created }
+          </span>
+          <br />
+          <a href={ route(['profile', task.assignee]) } id="assignee">
+            <i class="ico ico-left fi-torso-business"></i>
+            { task.assignee || 'anonymous' }
+          </a>
+        </todo-task>
+      </li>
+    </ul>
 
-  <button id="deleteTasks"
-          class={ is-danger: hasCompletedTasks(), is-disabled: !hasCompletedTasks(), u-pull-left: true }
-          disabled={ !hasCompletedTasks() }
-          onclick={ deleteCompleted }
-          if={ tasks.length }>
-          <i class="ico ico-left fi-trash"></i> Delete Completed
-  </button>
+    <button id="deleteTasks"
+            class={ is-danger: hasCompletedTasks(), is-disabled: !hasCompletedTasks(), u-pull-left: true }
+            disabled={ !hasCompletedTasks() }
+            onclick={ deleteCompleted }>
+        <i class="ico ico-left fi-trash"></i> Delete Completed
+    </button>
+  </virtual>
 
   <alert class="is-warning animated fadeIn" if={ !tasks.length }>
     <h5 class="text-center">
@@ -32,38 +37,54 @@
   </alert>
 
   <script>
-    this.tasks = this.$todo.tasks
+    import panime from '@exah/promise-animejs'
 
-    toggle(e) {
-      if (e.target.id != 'assignee')
-        e.item.completed = !e.item.completed
-    }
+    const self = this
+    self.tasks = self.$todo.tasks
+
+    self.on('update', function() {
+      self.tasks = self.$todo.tasks
+    })
+
+    self.$todo.on('update', function() {
+      if (self.tasks.length != self.$todo.tasks.length)
+        self.update()
+    })
 
     hasCompletedTasks() {
-      return this.tasks.find(task => task.completed) ? true : false
+      return self.tasks.find(task => task.completed) ? true : false
     }
 
-    deleteCompleted() {
-      const self = this
+    toggle(e) {
+      self.$todo.editTask(e.item.task.id, {
+        completed: !e.item.task.completed
+      })
+    }
 
-      self.tasks.filter((task) => {
-        return task.completed
-      }).forEach((task) => {
-        var taskEl = document.querySelector(`#task-${task.id}`)
-        var opacity = parseFloat(getComputedStyle(taskEl).opacity)
-        var fade = setInterval(() => {
-          if (opacity > 0) {
-            opacity -= 0.10
-            taskEl.setAttribute('style', `opacity: ${ opacity }`)
+    deleteCompleted(e) {
+      e.preventUpdate = true
+
+      const tasks = self.tasks
+        .filter(task => task.completed)
+        .map(task => {
+          return {
+            id: task.id,
+            node: Array.isArray(self.refs.tasks) ?
+              self.refs.tasks.find(t => t._tag.task.id == task.id) : self.refs.tasks
           }
-          else {
-            self.$todo.deleteTask(task.id)
-            self.update()
-            try { taskEl.parentElement.removeChild(taskEl) }
-            catch(Exception) {}
-            clearInterval(fade)
-          }
-        }, 100)
+        })
+
+      const animations = tasks.map(task => {
+        return panime({
+          targets: task.node,
+          opacity: 0,
+          duration: 500,
+          easing: 'linear'
+        })
+      })
+
+      Promise.all(animations).then(() => {
+        self.$todo.deleteTasks(tasks.map(task => task.id))
       })
     }
   </script>
