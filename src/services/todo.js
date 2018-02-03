@@ -1,3 +1,5 @@
+import _ from 'lodash'
+
 export default class ToDo {
 
   /**
@@ -8,7 +10,11 @@ export default class ToDo {
   constructor(instance, tasks) {
     this.$riot = instance
     this.$riot.observable(this)
-    this.tasks = tasks
+    this._tasks = tasks
+  }
+
+  get tasks() {
+    return _.cloneDeep(this._tasks)
   }
 
   /**
@@ -16,7 +22,7 @@ export default class ToDo {
    * @param {string} taskId - Id of task to find.
    */
   _findTaskById(taskId) {
-    var task = this.tasks.findIndex(task => task.id == taskId)
+    var task = this._tasks.findIndex(task => task.id == taskId)
     if (typeof task == 'undefined')
       throw Error('Task marked for deletion could not be found')
     return task
@@ -31,8 +37,8 @@ export default class ToDo {
     task.id = created.getTime().toString(16)
     task.created = created
     task.completed = false
-    self.tasks.push(task)
-    this.trigger('add')
+    this._tasks.push(task)
+    this.trigger('update')
   }
 
   /**
@@ -40,17 +46,17 @@ export default class ToDo {
    * @param {string} taskId - Id of task to delete.
    */
   deleteTask(taskId) {
-    this.tasks.splice(this._findTaskById(taskId, 1), 1)
-    this.trigger('delete')
+    this._tasks.splice(this._findTaskById(taskId), 1)
+    this.trigger('update')
   }
 
   /**
    * Delete an existing task.
-   * @param {string[]} taskId - Id of task to delete.
+   * @param {string[]} tasks - Ids of tasks to delete.
    */
   deleteTasks(tasks) {
-    tasks.forEach(task => this.tasks.splice(this._findTaskById(task.id, 1), 1))
-    this.trigger('delete')
+    tasks.forEach(id => this._tasks.splice(this._findTaskById(id), 1))
+    this.trigger('update')
   }
 
   /**
@@ -58,10 +64,10 @@ export default class ToDo {
    * @param {object} task - Updated task object.
    */
   editTask(taskId, task) {
-    let found = self.tasks[this._findTaskById(taskId)]
+    let found = this._tasks[this._findTaskById(taskId)]
     found = Object.assign(found, task)
     found.edited = new Date()
-    this.trigger('edit')
+    this.trigger('update')
   }
 
 }
