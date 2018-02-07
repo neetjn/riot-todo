@@ -46,11 +46,6 @@
       self.tasks = self.$todo.tasks
     })
 
-    self.$todo.on('update', function() {
-      if (self.tasks.length != self.$todo.tasks.length)
-        self.update()
-    })
-
     hasCompletedTasks() {
       return self.tasks.find(task => task.completed) ? true : false
     }
@@ -83,9 +78,9 @@
         })
       })
 
-      Promise.all(animations).then(() => {
-        self.$todo.deleteTasks(tasks.map(task => task.id))
-      })
+      Promise.all(animations)
+        .then(() => self.$todo.one('update', self.update))
+        .then(() => self.$todo.deleteTasks(tasks.map(task => task.id)))
     }
   </script>
 </todo-list>
