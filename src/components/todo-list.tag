@@ -51,9 +51,10 @@
     }
 
     toggle(e) {
-      self.$todo.editTask(e.item.task.id, {
-        completed: !e.item.task.completed
-      })
+      if (e.target.id != 'assignee')
+        self.$todo.editTask(e.item.task.id, {
+          completed: !e.item.task.completed
+        })
     }
 
     deleteCompleted(e) {
