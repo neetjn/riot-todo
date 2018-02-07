@@ -38,7 +38,7 @@ export default class ToDo {
     task.created = created
     task.completed = false
     this._tasks.push(task)
-    this.trigger('update')
+    this.trigger('add')
   }
 
   /**
@@ -47,7 +47,7 @@ export default class ToDo {
    */
   deleteTask(taskId) {
     this._tasks.splice(this._findTaskById(taskId), 1)
-    this.trigger('update')
+    this.trigger('delete')
   }
 
   /**
@@ -56,7 +56,7 @@ export default class ToDo {
    */
   deleteTasks(tasks) {
     tasks.forEach(id => this._tasks.splice(this._findTaskById(id), 1))
-    this.trigger('update')
+    this.trigger('delete')
   }
 
   /**
@@ -67,7 +67,7 @@ export default class ToDo {
     let found = this._tasks[this._findTaskById(taskId)]
     found = Object.assign(found, task)
     found.edited = new Date()
-    this.trigger('update')
+    this.trigger('edit')
   }
 
 }

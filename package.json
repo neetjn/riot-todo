@@ -35,7 +35,7 @@
     "lodash": "^4.17.4",
     "node-sass": "4.0.0",
     "raw-loader": "0.5.1",
-    "riot": "3.7.3",
+    "riot": "3.8.1",
     "riot-view-router": "0.1.4",
     "riot-tag-loader": "1.0.0",
     "sass-loader": "6.0.5",

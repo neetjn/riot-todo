@@ -46,6 +46,12 @@
       self.tasks = self.$todo.tasks
     })
 
+    // # make sure update is invoked within tag context
+    self.on('tasks-updated', self.update)
+    self.$todo.on('add', function() {
+      self.trigger('tasks-updated')
+    })
+
     hasCompletedTasks() {
       return self.tasks.find(task => task.completed) ? true : false
     }
@@ -80,7 +86,7 @@
       })
 
       Promise.all(animations)
-        .then(() => self.$todo.one('update', self.update))
+        .then(() => self.$todo.one('delete', self.update))
         .then(() => self.$todo.deleteTasks(tasks.map(task => task.id)))
     }
   </script>
